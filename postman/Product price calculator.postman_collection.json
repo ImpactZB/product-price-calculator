@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "43547899-8900-4cb3-a05b-7264e2d7ab93",
+		"name": "Product price calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Percentage Discount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"percentage\": \"34\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product/{{PRODUCT_ID}}/discount/percentageBasedDiscount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"{{PRODUCT_ID}}",
+						"discount",
+						"percentageBasedDiscount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Amount Based Discount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"percentage\": \"40\",\n    \"amount\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product/{{PRODUCT_ID}}/discount/amountBasedDiscount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"{{PRODUCT_ID}}",
+						"discount",
+						"amountBasedDiscount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product Discount",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/{{PRODUCT_ID}}/discount/15ceaff5-1533-4bbb-9a73-c4a349a5c542",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"{{PRODUCT_ID}}",
+						"discount",
+						"15ceaff5-1533-4bbb-9a73-c4a349a5c542"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Discounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/{{PRODUCT_ID}}/discount",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"{{PRODUCT_ID}}",
+						"discount"
+					]
+				},
+				"description": "Creates discount"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/product/{{PRODUCT_ID}}/price?amount=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"{{PRODUCT_ID}}",
+						"price"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PRODUCT_ID",
+			"value": "0499a440-bbea-467d-8d4f-fd6cfd6d4e06"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+health endpoint
+spring actuator
+dockerfile
+maven docker plugin
+stretegy pattern introduced to mapper and services
+find and remove all fixme and todo
+remove all comments
+remove all unused imports
+export Postman collection
+describe how to get access to h2 db    jdbc:h2:mem:testdb
