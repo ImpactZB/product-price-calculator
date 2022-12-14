@@ -50,7 +50,7 @@ Please follow Swagger UI spec or use attached Postman collection to work with se
 /actuator/health/readiness
 ```
 
-### Documentation
+## Documentation
 Service is calculating total price for given product amount and requested type of discount.
 Application provides ability to store two types of discounts for predefined, example set of products.
 Percentage based discount created for product will have influence on product price for any number of products. There can be only one that type of discount created for product.
